@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="loginViewModel"
+            type="com.example.realwhatsappclone.login.LoginViewModel" />
+    </data>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:padding="15dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_phone_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/email"
+                    android:text="@={loginViewModel.email}"
+
+                    android:textColor="#000"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_logo" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_pass_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:text="@={loginViewModel.password}"
+
+
+
+                    android:textColor="#000"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_phone_input" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_pass_confirm_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/password_confirmation"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:text="@={loginViewModel.passwordConfirmation}"
+                    android:visibility="@{loginViewModel.passworConfirmVisibility}"
+                    android:textColor="#000000"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_pass_input" />
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@={loginViewModel.textInButton}"
+                    android:onClick="@{(view)->loginViewModel.buttonClicked(view)}"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_pass_confirm_input" />
+
+                <TextView
+                    android:id="@+id/remind_my_password_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:onClick="@{(view)->loginViewModel.switchState(view)}"
+                    android:text="@string/remind_my_password"
+                    android:visibility="@{loginViewModel.remindPassVisibility}"
+
+                    app:layout_constraintBottom_toTopOf="@id/create_new_user_state"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/login_state"
+                    android:layout_width="wrap_content"
+                    android:onClick="@{(view)->loginViewModel.switchState(view)}"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:visibility="@{loginViewModel.loginTextVisibility}"
+                    android:text="@string/login"
+
+                    app:layout_constraintBottom_toTopOf="@id/remind_my_password_state"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                   />
+
+                <TextView
+                    android:id="@+id/create_new_user_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:onClick="@{(view)->loginViewModel.switchState(view)}"
+                    android:text="@string/register"
+                    android:visibility="@{loginViewModel.registerTextVisibility}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/login_logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+      
+
+
+</layout>

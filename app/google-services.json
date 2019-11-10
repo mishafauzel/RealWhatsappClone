@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "571125056389",
+    "firebase_url": "https://realwhatsappclone.firebaseio.com",
+    "project_id": "realwhatsappclone",
+    "storage_bucket": "realwhatsappclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571125056389:android:db2d1ea5d620613f8bbaec",
+        "android_client_info": {
+          "package_name": "com.example.realwhatsappclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571125056389-mui95uvea0mffk7hl2p4d1hgmi9oloen.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.realwhatsappclone",
+            "certificate_hash": "aa783c7806f3164b18278b240c7f13e3dd698ea3"
+          }
+        },
+        {
+          "client_id": "571125056389-k1jt6drd2mm5upp312vdjsufdjbidoo7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.realwhatsappclone",
+            "certificate_hash": "e7b9405cc6ac52efafd08c0b31f537147cea687e"
+          }
+        },
+        {
+          "client_id": "571125056389-hpdifkisl8ks73r9dt3l2v9hjjbksu98.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.realwhatsappclone",
+            "certificate_hash": "923b2b15882f404bb3458d6418acedb6bee7aad3"
+          }
+        },
+        {
+          "client_id": "571125056389-tg682e2qlatjs6too8ken744nun5m0cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiMHZYki6mZ1oAMXVkEm6awkQHz7K7N3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571125056389-tg682e2qlatjs6too8ken744nun5m0cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

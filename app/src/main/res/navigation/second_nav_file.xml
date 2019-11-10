@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_nav_file"
+    app:startDestination="@id/dialogsFragment">
+    <fragment
+        android:id="@+id/dialogsFragment"
+        android:name="com.example.realwhatsappclone.dialogs.DialogsFragment"
+        android:label="fragment_dialogs"
+        tools:layout="@layout/fragment_dialogs" >
+        <action
+            android:id="@+id/action_dialogsFragment_to_usersFragment"
+            app:destination="@id/usersFragment"
+            app:popUpTo="@+id/dialogsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.realwhatsappclone.users.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_messageFragment"
+            app:destination="@id/messageFragment"
+            app:popUpTo="@+id/dialogsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.realwhatsappclone.messages.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <activity
+        android:id="@+id/baseActivity"
+        android:name="com.example.realwhatsappclone.BaseActivity"
+        android:label="activity_base"
+        tools:layout="@layout/activity_base" />
+</navigation>
